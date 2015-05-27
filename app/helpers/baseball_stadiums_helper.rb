@@ -1,0 +1,2 @@
+module BaseballStadiumsHelper
+end

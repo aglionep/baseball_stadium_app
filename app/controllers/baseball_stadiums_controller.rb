@@ -1,0 +1,2 @@
+class BaseballStadiumsController < ApplicationController
+end
