@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+	BaseballStadium.create(name: "Angels Stadium", team: "Angels", league: "AL", address: "2000 E Gene Autry Way, Anaheim, CA 92806")

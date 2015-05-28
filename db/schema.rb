@@ -11,21 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150527215927) do
+ActiveRecord::Schema.define(version: 20150528013654) do
 
   create_table "baseball_stadia", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "team"
+    t.string   "league"
+    t.string   "address"
   end
 
   create_table "reviews", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "comment"
+    t.integer  "rating"
   end
 
   create_table "users", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "email"
+    t.string   "city"
   end
 
 end
