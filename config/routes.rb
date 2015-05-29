@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   
-get "stadiums/" => "baseballstadiums#index"
-get "stadiums/:id" => "baseballstadiums#show" as: :stadium
+root 'baseball_stadiums#index'
+
+get "stadiums/" => "baseball_stadiums#index"
+get "stadiums/:id" => "baseball_stadiums#show", as: :stadium
 # get ""
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
