@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150528013654) do
+ActiveRecord::Schema.define(version: 20150529232506) do
 
   create_table "baseball_stadia", force: true do |t|
     t.datetime "created_at"
@@ -27,14 +27,19 @@ ActiveRecord::Schema.define(version: 20150528013654) do
     t.datetime "updated_at"
     t.text     "comment"
     t.integer  "rating"
+    t.integer  "user_id"
+    t.integer  "baseball_stadia_id"
   end
+
+  add_index "reviews", ["baseball_stadia_id"], name: "index_reviews_on_baseball_stadia_id"
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
 
   create_table "users", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
     t.string   "email"
-    t.string   "city"
+    t.string   "password_digest"
   end
 
 end
