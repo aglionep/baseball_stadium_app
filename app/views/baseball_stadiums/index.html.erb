@@ -1,14 +1,16 @@
 <h1>Take Me Out To The Ballgame! </h1>
 
+
 	<ul>
 		
 	<% @stadiums.each do |s| %>
 		<li>
 		<%= s.name %>
+		<%= link_to "Visit Stadium", stadium_path(s) %>
 		</li>
 	<% end %>
 
 	</ul>
 
-	<!-- set up link to show stadiums  -->
-	<!-- Let's go to the game "link_to" -->
+
+	

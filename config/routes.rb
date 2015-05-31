@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  # resources :baseball_stadiums do
   
 root 'baseball_stadiums#index'
 
 get "stadiums/" => "baseball_stadiums#index"
 get "stadiums/:id" => "baseball_stadiums#show", as: :stadium
-# get ""
+
+# # get ""
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
