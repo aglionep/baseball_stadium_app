@@ -1,10 +1,13 @@
 class BaseballStadiumsController < ApplicationController
 
 	def index
-		@stadiums = BaseballStadium.all
+		@stadium = BaseballStadium.all
 	end
 
 	def show
-		@stadiums = BaseballStadium.find(params[:id])
+		# require "pry" 
+		# binding.pry
+		@stadium = BaseballStadium.find(params[:id])
+	# @reviews = @stadiums.reviews
 	end
 end

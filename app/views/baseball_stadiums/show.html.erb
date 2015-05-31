@@ -1,6 +1,13 @@
-<h1> <%= @stadiums.name %> </h1> 
+<h1> <%= @stadium.name %> </h1> 
 
-<p> This stadium is the home of the <%= @stadiums.team %>, it is in the <%= @stadiums.league %>, it is located at <%= @stadiums.address %>
+
+
+
+<p> This stadium is the home of the <%= @stadium.team %>, it is in the <%= @stadium.league %>, it is located at <%= @stadium.address %>
 </p>
 
 <%= link_to "Back to index", stadiums_path %>
+
+<%= link_to "Submit a Review" %>
+
+

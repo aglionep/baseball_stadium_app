@@ -5,6 +5,8 @@ root 'baseball_stadiums#index'
 
 get "stadiums/" => "baseball_stadiums#index"
 get "stadiums/:id" => "baseball_stadiums#show", as: :stadium
+get "stadiums/:id/reviews/new" => "reviews#new"
+get "stadiums/:id/reviews/create" => "reviews#create"
 
 # # get ""
   # The priority is based upon order of creation: first created -> highest priority.
