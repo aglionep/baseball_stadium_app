@@ -6,6 +6,7 @@ class ReviewsController < ApplicationController
 
 	def create
 		@review = Review.new(review_params)
+			redirect_to stadiums_path
 	end
 
 end

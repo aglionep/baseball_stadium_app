@@ -3,14 +3,14 @@ Rails.application.routes.draw do
   
 root 'baseball_stadiums#index'
 
-resources :stadiums do
-  resources :reviews
-end
+# resources :stadiums do
+#   resources :reviews
+# end
 
-# get "stadiums/" => "baseball_stadiums#index"
-# get "stadiums/:id" => "baseball_stadiums#show", as: :stadium
-# get "stadiums/:id/reviews/new" => "reviews#new", as: :new_review
-# post "stadiums/:id/reviews/" => "reviews#create", as: :reviews
+get "stadiums/" => "baseball_stadiums#index"
+get "stadiums/:id" => "baseball_stadiums#show", as: :stadium
+get "stadiums/:id/reviews/new" => "reviews#new", as: :new_review
+post "stadiums/:id/reviews/" => "reviews#create", as: :reviews
 
 
 # # get ""
