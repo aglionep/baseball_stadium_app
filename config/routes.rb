@@ -3,10 +3,15 @@ Rails.application.routes.draw do
   
 root 'baseball_stadiums#index'
 
-get "stadiums/" => "baseball_stadiums#index"
-get "stadiums/:id" => "baseball_stadiums#show", as: :stadium
-get "stadiums/:id/reviews/new" => "reviews#new"
-get "stadiums/:id/reviews/create" => "reviews#create"
+resources :stadiums do
+  resources :reviews
+end
+
+# get "stadiums/" => "baseball_stadiums#index"
+# get "stadiums/:id" => "baseball_stadiums#show", as: :stadium
+# get "stadiums/:id/reviews/new" => "reviews#new", as: :new_review
+# post "stadiums/:id/reviews/" => "reviews#create", as: :reviews
+
 
 # # get ""
   # The priority is based upon order of creation: first created -> highest priority.
