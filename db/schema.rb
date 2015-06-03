@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150529232506) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "baseball_stadia", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -31,8 +34,8 @@ ActiveRecord::Schema.define(version: 20150529232506) do
     t.integer  "baseball_stadia_id"
   end
 
-  add_index "reviews", ["baseball_stadia_id"], name: "index_reviews_on_baseball_stadia_id"
-  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
+  add_index "reviews", ["baseball_stadia_id"], name: "index_reviews_on_baseball_stadia_id", using: :btree
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.datetime "created_at"
