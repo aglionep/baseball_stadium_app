@@ -9,6 +9,15 @@ class ReviewsController < ApplicationController
 			redirect_to stadiums_path
 	end
 
+	def edit
+		@review = find(review_params)
+	end	
+
+	def update
+	end
+
+	def show
+	end	
 end
 
 private
