@@ -1,18 +1,3 @@
-<%= form_for @review do |f| %>
-  <p>
-    <%= f.label :comment %><br>
-    <%= f.text_area :comment %>
-  </p>
- 
-  <p>
-    <%= f.label :rating %><br>
-    <%= f.text_field :rating %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<h1>Make a comment!</h1>
 
-
- 
+<%= render 'form' %>

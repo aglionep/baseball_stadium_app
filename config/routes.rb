@@ -4,12 +4,10 @@ Rails.application.routes.draw do
 root 'baseball_stadiums#index'
 
   # resources :stadiums do
-  # resources :reviews
-  # end  
-
-  #   resources :users do
   #   resources :reviews
-  # end
+  #   end  
+
+  #   resources :users 
 
 get "stadiums/" => "baseball_stadiums#index"
 get "stadiums/:id" => "baseball_stadiums#show", as: :stadium
