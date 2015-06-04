@@ -5,9 +5,11 @@ class BaseballStadiumsController < ApplicationController
 	end
 
 	def show
-		# require "pry" 
-		# binding.pry
 		@stadium = BaseballStadium.find(params[:id])
-	# @reviews = @stadiums.reviews
+
+	end
+
+	def new
+		@stadium = BaseballStadium.new
 	end
 end

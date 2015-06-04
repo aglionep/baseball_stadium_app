@@ -10,8 +10,6 @@ class ReviewsController < ApplicationController
 
 	def create
 		@review = Review.new(review_params)
-		@review.baseball_stadia_id
-
 		if @review.save
 			redirect_to stadiums_path
 		else
@@ -20,9 +18,20 @@ class ReviewsController < ApplicationController
 	end
 
 	def edit
+<<<<<<< HEAD
+		@review = find(review_params)
+	end	
+
+	def update
+	end
+
+	def show
+	end	
+=======
 		@review = Review.find(params[:id]) 
     end
 
+>>>>>>> master
 end
 
 private

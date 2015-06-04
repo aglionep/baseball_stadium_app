@@ -9,8 +9,18 @@ root 'baseball_stadiums#index'
 
   #   resources :users 
 
+
+
 get "stadiums/" => "baseball_stadiums#index"
+get "stadiums/new" => "baseball_stadiums#new", as: :new_stadium
+
+
 get "stadiums/:id" => "baseball_stadiums#show", as: :stadium
+
+
+
+
+
 post "stadiums/:id/reviews/" => "reviews#create", as: :reviews
 get "stadiums/:id/reviews/new" => "reviews#new", as: :new_stadium_review
 get "stadiums/:id/reviews/edit" => "reviews#edit", as: :edit_stadium_review

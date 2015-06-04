@@ -1,0 +1,14 @@
+<h1> <%= @stadium.name %> </h1> 
+
+
+<p> This stadium is the home of the <%= @stadium.team %>, it is in the <%= @stadium.league %>, it is located at <%= @stadium.address %>
+</p>
+
+<%= link_to "Back to index", stadiums_path %>
+
+<<<<<<< HEAD
+<%= link_to "Submit a Review", new_stadium_review_path %>
+
+
+=======
+>>>>>>> master
