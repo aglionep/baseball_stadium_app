@@ -12,7 +12,7 @@ root 'baseball_stadiums#index'
 
 
 get "stadiums/" => "baseball_stadiums#index"
-get "stadiums/new" => "baseball_stadiums#new", as: :new_stadium
+get "stadiums/new" => "baseball_stadiums#new", as: :baseball_stadia
 
 
 get "stadiums/:id" => "baseball_stadiums#show", as: :stadium
